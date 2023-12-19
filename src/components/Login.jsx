@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Button, Spin } from 'antd';
 import { useNavigate } from 'react-router';
 
-
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -23,10 +22,6 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
     }
-
-
-
-
     return (
         <>
             <Spin tip='Loading...' spinning={loading} className='spin-btn'>
@@ -46,8 +41,6 @@ const Login = () => {
                         <div>
                             <button type='submit' className='login-btn'>Login In</button>
                         </div>
-
-
                     </form>
                     <div>
                         <Button type='primary' onClick={handleRegisterClick} className='register-btn-ant'>
@@ -59,5 +52,4 @@ const Login = () => {
         </>
     );
 };
-
 export default Login;
